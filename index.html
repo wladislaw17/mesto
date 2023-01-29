@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesto</title>
+    <link rel="stylesheet" href="pages/index.css">
+</head>
+<body class="page">
+    <header class="header">
+        <img class="header__logo" src="images/logo.svg" alt="Логотип Место">
+    </header>
+    <main class="content">
+        <section class="profile">
+            <img class="profile__avatar" src="images/avatar.gif" alt="Аватар профиля">
+            <div class="profile__info">
+                <h3 class="profile__name">Eve Eve</h3>
+                <button class="profile__edit-button"></button>
+                <p class="profile__status">sinx^2+cosx^2=1</p>
+            </div>
+            <button class="profile__add-button"></button>
+        </section>
+        <section class="popup">
+            <form class="popup__container">
+              <h3 class="popup__title">Редактировать профиль</h3>
+              <input class="popup__name-field" type="text" value="Eve Eve">
+              <input class="popup__status-field" type="text" value="sinx^2+cosx^2=1">
+              <button class="popup__submit-button" type="submit"><span class="submit-button__text">Сохранить</span></button>
+              <button class="popup__close-button"></button>
+            </form>
+        </section>
+        <section class="elements">
+            <div class="elements__element">
+                <img class="element__image" src="images/okinawa.jpg" alt="Остров Окинава">
+                <div class="element__row">
+                    <h4 class="element__title">Окинава</h4>
+                    <button class="element__like-button"></button>
+                </div>
+            </div>
+            <div class="elements__element">
+                <img class="element__image" src="images/tokyo.jpg" alt="улица в Токио">
+                <div class="element__row">
+                    <h4 class="element__title">Tokyo0o+33!</h4>
+                    <button class="element__like-button"></button>
+                </div>
+            </div>
+            <div class="elements__element">
+                <img class="element__image" src="images/neverland.jpg" alt="Обещанный неверлэнд">
+                <div class="element__row">
+                    <h4 class="element__title">neverland</h4>
+                    <button class="element__like-button"></button>
+                </div>
+            </div>
+            <div class="elements__element">
+                <img class="element__image" src="images/yourname.jpg" alt="Твоё имя">
+                <div class="element__row">    
+                    <h4 class="element__title">whatsurname?????</h4>
+                    <button class="element__like-button"></button>
+                </div>
+            </div>
+            <div class="elements__element">
+                <img class="element__image" src="images/rafsimons.png" alt="Кроссовки">
+                <div class="element__row">
+                    <h4 class="element__title">iooooo</h4>
+                    <button class="element__like-button"></button>
+                </div>
+            </div>
+            <div class="elements__element">
+                <img class="element__image" src="images/nyancat.gif" alt="Кот">
+                <div class="element__row">
+                    <h4 class="element__title">qq</h4>
+                    <button class="element__like-button"></button>
+                </div>  
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p class="footer__copyright">© 2020 Mesto Russia</p>
+    </footer>
+    <script src="scripts/script.js"></script>
+</body>
+</html>

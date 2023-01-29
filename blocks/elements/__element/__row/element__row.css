@@ -1,0 +1,6 @@
+.element__row {
+    margin: 25px 15px 31px 21px;
+    display: grid;
+    grid-template-rows: 1;
+    grid-template-columns: 4fr 1fr;
+}
