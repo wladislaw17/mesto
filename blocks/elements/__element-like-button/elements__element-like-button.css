@@ -1,11 +1,11 @@
-.element__like-button {
+.elements__element-like-button {
     width: 22px;
     height: 19px;
     margin: 0;
     padding: 0;
     border: 0;
     line-height: 1;
-    background: url("../../../../images/like-button-white.svg");
+    background: url("../../../images/like-button-white.svg");
     grid-row: 1;
     grid-column: 2;
     justify-self: end;
@@ -13,11 +13,10 @@
     margin-right: 5px;
 }
 
-.element__like-button:hover {
+.elements__element-like-button:hover {
     opacity: 0.5;
 }
-
-.element__like-button:active {
+.elements__element-like-button:active {
     opacity: 1;
-    background: url("../../../../images/like-button-black.svg");
+    background: url("../../../images/like-button-black.svg");
 }

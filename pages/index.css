@@ -22,15 +22,15 @@
 @import url(../blocks/popup/__name-field/popup__name-field.css);
 @import url(../blocks/popup/__status-field/popup__status-field.css);
 @import url(../blocks/popup/__submit-button/popup__submit-button.css);
-@import url(../blocks/popup/__submit-button/__text/submit-button__text.css);
+@import url(../blocks/popup/__submit-button-text/popup__submit-button-text.css);
 @import url(../blocks/popup/__close-button/popup__close-button.css);
 
 @import url(../blocks/elements/elements.css);
 @import url(../blocks/elements/__element/elements__element.css);
-@import url(../blocks/elements/__element/__image/element__image.css);
-@import url(../blocks/elements/__element/__row/element__row.css);
-@import url(../blocks/elements/__element/__title/element__title.css);
-@import url(../blocks/elements/__element/__like-button/element__like-button.css);
+@import url(../blocks/elements/__element-image/elements__element-image.css);
+@import url(../blocks/elements/__element-row/elements__element-row.css);
+@import url(../blocks/elements/__element-title/elements__element-title.css);
+@import url(../blocks/elements/__element-like-button/elements__element-like-button.css);
 
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__copyright/footer__copyright.css);
