@@ -14,62 +14,53 @@
         <section class="profile">
             <img class="profile__avatar" src="images/avatar.jpg" alt="Аватар профиля">
             <div class="profile__info">
-                <h3 class="profile__name">Eve Eve</h3>
-                <button class="profile__edit-button"></button>
+                <h1 class="profile__name">Eve Eve</h1>
+                <button aria-label="Кнопка изменить" class="profile__edit-button" type="button"></button>
                 <p class="profile__status">sinx^2+cosx^2=1</p>
             </div>
-            <button class="profile__add-button"></button>
-        </section>
-        <section class="popup">
-            <form class="popup__container">
-              <h3 class="popup__title">Редактировать профиль</h3>
-              <input class="popup__name-field" type="text" value="Eve Eve">
-              <input class="popup__status-field" type="text" value="sinx^2+cosx^2=1">
-              <button class="popup__submit-button" type="submit"><span class="popup__submit-button-text">Сохранить</span></button>
-              <button class="popup__close-button"></button>
-            </form>
+            <button aria-label="Кнопка добавить" class="profile__add-button" type="button"></button>
         </section>
         <section class="elements">
-            <div class="elements__element">
-                <img class="elements__element-image" src="images/okinawa.jpg" alt="Остров Окинава">
-                <div class="elements__element-row">
-                    <h4 class="elements__element-title">Окинава</h4>
-                    <button class="elements__element-like-button"></button>
+            <div class="card">
+                <img class="card__image" src="images/okinawa.jpg" alt="Остров Окинава">
+                <div class="card__row">
+                    <h2 class="card__title">Окинава</h2>
+                    <button aria-label="Кнопка нравится" class="card__like-button" type="button"></button>
                 </div>
             </div>
-            <div class="elements__element">
-                <img class="elements__element-image" src="images/tokyo.jpg" alt="улица в Токио">
-                <div class="elements__element-row">
-                    <h4 class="elements__element-title">Tokyo0o+33!</h4>
-                    <button class="elements__element-like-button"></button>
+            <div class="card">
+                <img class="card__image" src="images/tokyo.jpg" alt="улица в Токио">
+                <div class="card__row">
+                    <h2 class="card__title">Tokyo0o+33!</h2>
+                    <button aria-label="Кнопка нравится" class="card__like-button" type="button"></button>
                 </div>
             </div>
-            <div class="elements__element">
-                <img class="elements__element-image" src="images/neverland.jpg" alt="Обещанный неверлэнд">
-                <div class="elements__element-row">
-                    <h4 class="elements__element-title">neverland</h4>
-                    <button class="elements__element-like-button"></button>
+            <div class="card">
+                <img class="card__image" src="images/neverland.jpg" alt="Обещанный неверлэнд">
+                <div class="card__row">
+                    <h2 class="card__title">neverland</h2>
+                    <button aria-label="Кнопка нравится" class="card__like-button" type="button"></button>
                 </div>
             </div>
-            <div class="elements__element">
-                <img class="elements__element-image" src="images/yourname.jpg" alt="Твоё имя">
-                <div class="elements__element-row">    
-                    <h4 class="elements__element-title">whatsurname?????</h4>
-                    <button class="elements__element-like-button"></button>
+            <div class="card">
+                <img class="card__image" src="images/yourname.jpg" alt="Твоё имя">
+                <div class="card__row">    
+                    <h2 class="card__title">whatsurname?????</h2>
+                    <button aria-label="Кнопка нравится" class="card__like-button" type="button"></button>
                 </div>
             </div>
-            <div class="elements__element">
-                <img class="elements__element-image" src="images/rafsimons.png" alt="Кроссовки">
-                <div class="elements__element-row">
-                    <h4 class="elements__element-title">iooooo</h4>
-                    <button class="elements__element-like-button"></button>
+            <div class="card">
+                <img class="card__image" src="images/rafsimons.png" alt="Кроссовки">
+                <div class="card__row">
+                    <h2 class="card__title">iooooo</h2>
+                    <button aria-label="Кнопка нравится" class="card__like-button" type="button"></button>
                 </div>
             </div>
-            <div class="elements__element">
-                <img class="elements__element-image" src="images/nyancat.gif" alt="Кот">
-                <div class="elements__element-row">
-                    <h4 class="elements__element-title">qq</h4>
-                    <button class="elements__element-like-button"></button>
+            <div class="card">
+                <img class="card__image" src="images/nyancat.gif" alt="Кот">
+                <div class="card__row">
+                    <h2 class="card__title">qq</h2>
+                    <button aria-label="Кнопка нравится" class="card__like-button" type="button"></button>
                 </div>  
             </div>
         </section>
@@ -77,6 +68,17 @@
     <footer class="footer">
         <p class="footer__copyright">© 2020 Mesto Russia</p>
     </footer>
+    <div class="popup">
+        <div class="popup__container">
+            <form class="form" name="profile-form"> 
+                <h2 class="form__title">Редактировать профиль</h2>
+                <input class="form__input form__input_value_name" type="text" name="profile-name" value="Eve Eve">
+                <input class="form__input form__input_value_status" type="text" name="profile-status" value="sinx^2+cosx^2=1">
+                <button aria-label="Кнопка сохранить" class="form__submit-button" type="submit">Сохранить</button>
+            </form>
+            <button aria-label="Кнопка закрыть" class="popup__close-button" type="button"></button>
+        </div>
+    </div>
     <script src="scripts/script.js"></script>
 </body>
 </html>

@@ -8,6 +8,7 @@
     background: url(../../../images/add_button-small.svg);
     align-self: center;
     justify-self: end;
+    cursor: pointer;
 }
 
 .profile__add-button:hover {

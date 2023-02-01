@@ -8,6 +8,7 @@
     background: url(../../../images/edit_button.svg);
     background-size: cover;
     align-self: flex-end;
+    cursor: pointer;
 }
 
 .profile__edit-button:hover {
@@ -18,5 +19,6 @@
     .profile__edit-button {
         width: 18px;
         height: 18px;
+        margin-bottom: 7px;
     }
 }

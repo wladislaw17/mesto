@@ -7,8 +7,9 @@
 @media screen and (max-width: 580px) {
     .profile__info {
         margin-bottom: 36px;
+        grid-template-columns: 18px min-content 18px;
         grid-row: 2;
-        gap: 14px 10px;
+        gap: 7px 10px;
         justify-self: center;
     }
 }
