@@ -1,9 +1,0 @@
-.form__input_value_status {
-    margin-bottom: 44px;
-}
-
-@media screen and (max-width: 580px) {
-    .form__input_value_status {
-        margin-bottom: 40px;
-    }
-}

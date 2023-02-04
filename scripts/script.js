@@ -10,6 +10,8 @@ const profileName = document.querySelector('.profile__name');
 const profileStatus = document.querySelector('.profile__status');
 
 function openPopup() {
+    nameInput.value = profileName.textContent;
+    statusInput.value = profileStatus.textContent;
     popupElement.classList.add('popup_opened');
 }
 

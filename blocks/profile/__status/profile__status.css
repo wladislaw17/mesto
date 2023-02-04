@@ -12,13 +12,13 @@
     max-width: 508px;
 }
 
-@media screen and (max-width: 879px) {
+@media screen and (max-width: 925px) {
     .profile__status {
         max-width: 389px;
     }
 }
 
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 625px) {
     .profile__status {
         max-width: 254px;
         font-size: 14px;

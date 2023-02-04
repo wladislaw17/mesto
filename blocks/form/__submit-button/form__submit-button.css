@@ -17,7 +17,7 @@
     cursor: pointer;
 }
 
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 625px) {
     .form__submit-button {
         width: 238px;
         height: 46px;

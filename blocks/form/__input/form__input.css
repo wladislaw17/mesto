@@ -10,13 +10,20 @@
     border: 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     width: 358px;
-    margin: auto;
+    margin: 0 auto 27px;
     padding-bottom: 13px;
     box-sizing: content-box;
 }
 
-@media screen and (max-width: 580px) {
+.form__input:last-of-type {
+    margin-bottom: 44px;
+}
+
+@media screen and (max-width: 625px) {
     .form__input {
         width: 238px;
     }
+    .form__input:last-of-type {
+        margin-bottom: 40px;
+    }    
 }
