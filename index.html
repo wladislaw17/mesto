@@ -21,56 +21,24 @@
             <button aria-label="Кнопка добавить" class="profile__add-button" type="button"></button>
         </section>
         <section class="elements">
-            <div class="card">
-                <img class="card__image" src="images/okinawa.jpg" alt="Остров Окинава">
-                <div class="card__row">
-                    <h2 class="card__title">Окинава</h2>
-                    <button aria-label="Кнопка нравится" class="card__like-button" type="button"></button>
+            <template id="card">
+                <div class="card">
+                    <button aria-label="Кнопка удалить" class="card__delete-button" type="button"></button>
+                    <img class="card__image" src="" alt="">
+                    <div class="card__row">
+                        <h2 class="card__title"></h2>
+                        <button aria-label="Кнопка нравится" class="card__like-button" type="button"></button>
+                    </div>  
                 </div>
-            </div>
-            <div class="card">
-                <img class="card__image" src="images/tokyo.jpg" alt="улица в Токио">
-                <div class="card__row">
-                    <h2 class="card__title">Tokyo0o+33!</h2>
-                    <button aria-label="Кнопка нравится" class="card__like-button" type="button"></button>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card__image" src="images/neverland.jpg" alt="Обещанный неверлэнд">
-                <div class="card__row">
-                    <h2 class="card__title">neverland</h2>
-                    <button aria-label="Кнопка нравится" class="card__like-button" type="button"></button>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card__image" src="images/yourname.jpg" alt="Твоё имя">
-                <div class="card__row">    
-                    <h2 class="card__title">whatsurname?????</h2>
-                    <button aria-label="Кнопка нравится" class="card__like-button" type="button"></button>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card__image" src="images/rafsimons.png" alt="Кроссовки">
-                <div class="card__row">
-                    <h2 class="card__title">iooooo</h2>
-                    <button aria-label="Кнопка нравится" class="card__like-button" type="button"></button>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card__image" src="images/nyancat.gif" alt="Кот">
-                <div class="card__row">
-                    <h2 class="card__title">qq</h2>
-                    <button aria-label="Кнопка нравится" class="card__like-button" type="button"></button>
-                </div>  
-            </div>
+            </template>
         </section>
     </main>
     <footer class="footer">
         <p class="footer__copyright">© 2020 Mesto Russia</p>
     </footer>
-    <div class="popup">
+    <div class="popup popup_profile">
         <div class="popup__container">
-            <form class="form" name="profile-form"> 
+            <form class="form form_profile" name="profile-form"> 
                 <h2 class="form__title">Редактировать профиль</h2>
                 <input class="form__input form__input_value_name" type="text" name="profile-name" value="Eve Eve">
                 <input class="form__input form__input_value_status" type="text" name="profile-status" value="sinx^2+cosx^2=1">
@@ -78,6 +46,24 @@
             </form>
             <button aria-label="Кнопка закрыть" class="popup__close-button" type="button"></button>
         </div>
+    </div>
+    <div class="popup popup_photo">
+        <div class="popup__container">
+            <form class="form form_photo" name="profile-form"> 
+                <h2 class="form__title">Новое место</h2>
+                <input class="form__input form__input_value_title" type="text" name="photo-title" placeholder="Название">
+                <input class="form__input form__input_value_link" type="text" name="photo-link" placeholder="Ссылка на картинку">
+                <button aria-label="Кнопка сохранить" class="form__submit-button" type="submit">Сохранить</button>
+            </form>
+            <button aria-label="Кнопка закрыть" class="popup__close-button" type="button"></button>
+        </div>
+    </div>
+    <div class="popup popup_view">
+        <div class="popup__content">
+            <img class="popup__image" src="" alt="">
+            <button aria-label="Кнопка закрыть" class="popup__close-button" type="button"></button>
+        </div>
+    </div>
     </div>
     <script src="scripts/script.js"></script>
 </body>
