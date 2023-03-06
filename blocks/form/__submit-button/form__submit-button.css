@@ -5,7 +5,7 @@
     height: 50px;
     margin: auto;
     display: block;
-    background-color: #000000;
+    background: rgba(0, 0, 0, 1);
     border-radius: 2px;
     font-family: 'Inter', Arial, sans-serif;
     font-style: normal;
@@ -28,5 +28,5 @@
 }
 
 .form__submit-button:hover {
-    opacity: 0.8;
+    background: rgba(0, 0, 0, 0.8);
 }

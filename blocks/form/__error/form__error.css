@@ -1,0 +1,26 @@
+.form__error {
+    display: none;
+    position: absolute;
+    top: 147px;
+    left: 36px;
+    color: #FF0000;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 12px;
+    line-height: calc(15/12);
+}
+
+.form__error:nth-of-type(2) {
+    top: 213px;
+    left: 36px;
+}
+
+@media screen and (max-width: 625px) {
+    .form__error {
+        top: 156px;
+        left: 22px;
+    }
+    .form__error:nth-of-type(2) {
+        top: 225px;
+        left: 22px;
+    }    
+}
