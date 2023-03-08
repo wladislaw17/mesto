@@ -1,8 +1,7 @@
 const buttonEdit = document.querySelector('.profile__edit-button');
 const buttonAdd = document.querySelector('.profile__add-button');
-const buttonsClose = document.querySelectorAll('.popup__close-button');
 
-const popupList = document.querySelectorAll('.popup');
+const popups = document.querySelectorAll('.popup');
 const popupProfile = document.querySelector('.popup_profile');
 const popupPhoto = document.querySelector('.popup_photo');
 const popupView = document.querySelector('.popup_view');
@@ -23,6 +22,8 @@ const photoLinkInput = document.querySelector('.form__input_value_link');
 
 const cardTemplate = document.querySelector('#card').content;
 const elements = document.querySelector('.elements');
+
+const photoSubmitButton = formElementPhoto.querySelector('.form__submit-button');
 
 const initialCards = [
   {
@@ -53,23 +54,20 @@ const initialCards = [
 
 function openPopup(popup) {
   popup.classList.add('popup_opened');
+  document.addEventListener('keydown', handleEscape);
 }
 
 function closePopup(popup) {
   popup.classList.remove('popup_opened');
+  document.removeEventListener('keydown', handleEscape);
 }
 
 const findOpenedPopup = () => document.querySelector('.popup_opened');
 
-function escapeHandle(evt) {
-  if (evt.key === 'Escape' && findOpenedPopup() !== null) {
-    closePopup(findOpenedPopup());
-  }
-}
-
-function overlayHandle(evt) {
-  if (evt.target.classList.contains('popup')) {
-    closePopup(findOpenedPopup());
+function handleEscape(evt) {
+  if (evt.key === 'Escape') {
+    const openedPopup = findOpenedPopup();
+    openedPopup && closePopup(openedPopup);
   }
 }
 
@@ -92,11 +90,6 @@ function handleCardClick(link, name) {
   openPopup(popupView);
 }
 
-function handleCrossClick(button) {
-  const popup = button.closest('.popup');
-  button.addEventListener('click', () => closePopup(popup));
-}
-
 function handleFormSubmitProfile(evt) {
   evt.preventDefault();
   profileName.textContent = profileNameInput.value;
@@ -110,6 +103,8 @@ function handleFormSubmitPhoto(evt) {
   elements.prepend(newCard);
   evt.target.reset();
   closePopup(popupPhoto);
+  photoSubmitButton.classList.add('form__submit-button_disabled');
+  photoSubmitButton.disabled = true;
 }
 
 function toggleLike(evt) {
@@ -125,16 +120,19 @@ initialCards.forEach(function(elem){
   elements.append(newCard);
 });
 
-popupList.forEach((popup) => {
-  popup.addEventListener('mousedown', overlayHandle);
-});
-
-buttonsClose.forEach(handleCrossClick);
+popups.forEach(popup => {
+  popup.addEventListener('mousedown', evt => {
+    if (evt.target.classList.contains('popup_opened')) {
+      closePopup(popup);
+    }
+    if (evt.target.classList.contains('popup__close-button')) {
+      closePopup(popup);
+    }
+   })
+})
 
 buttonEdit.addEventListener('click', () => openPopup(popupProfile));
 buttonAdd.addEventListener('click', () => openPopup(popupPhoto));
 
 formElementProfile.addEventListener('submit', handleFormSubmitProfile);
 formElementPhoto.addEventListener('submit', handleFormSubmitPhoto);
-
-document.addEventListener('keydown', escapeHandle);
